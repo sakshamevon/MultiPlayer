@@ -37,7 +37,7 @@ class SongListAdapter(SongModel: ArrayList<SongModel>,context:Context):RecyclerV
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SongListViewHolder {
 
-        var view = LayoutInflater.from(parent!!.context).inflate(R.layout.music_list,parent,false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.music_list,parent,false)
         return SongListViewHolder(view)
 
     }
@@ -54,7 +54,7 @@ class SongListAdapter(SongModel: ArrayList<SongModel>,context:Context):RecyclerV
 
                 for (i in 0 until msongModel.size){
 
-                    allMusicList.add(msongModel[i].mSongName)
+                    allMusicList.add(msongModel[i].mSongPath)
 
                 }
 

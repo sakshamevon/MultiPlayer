@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
 
             var songName=songcursor.getString(songcursor.getColumnIndex(MediaStore.Audio.Media.TITLE))
             var songDuration = songcursor.getString(songcursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
-            songModelData.add(SongModel(songName,songDuration))
+            var songPath: String = songcursor.getString(songcursor.getColumnIndex(MediaStore.Audio.Media.DATA))
+            songModelData.add(SongModel(songName,songDuration,songPath))
         }
         songListAdapter = SongListAdapter(songModelData,applicationContext)
         var layoutManager = LinearLayoutManager(applicationContext)
