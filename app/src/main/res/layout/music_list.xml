@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/al_img_view"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:padding="10sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/al_img_view" >
+
+                <TextView
+                    android:id="@+id/song_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Demo Song Name"
+                    android:textSize="20sp"
+                    android:textColor="#070606"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginTop="12sp"/>
+
+                <TextView
+                    android:id="@+id/song_duration_tv"
+                    android:layout_marginTop="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="3:00"
+                    android:textSize="18sp"
+                    android:textColor="#070606"
+                    android:layout_marginLeft="12sp"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
